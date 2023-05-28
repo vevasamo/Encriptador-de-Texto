@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+        <title>Encriptador de Texto</title>
+    </head>
+    <body>
+        <div class="contenedor">
+            <header>
+                <img class="logo" src="./Imagenes/VS Desarrollos.png" alt="Logo del Encriptador" >
+                <a  href="https://www.linkedin.com/in/vanesamo/">
+                    <img class="linkedIn" src="./Imagenes/linkedin.webp" alt="LinkedIn"/>
+                </a>      
+                <h2>Encriptador de Texto</h2>
+            </header>
+            <main>
+                <section>
+                    <textarea class="textoIng" onclick="limpiaEnc()" cols="30" rows="10" onkeypress="validaTexto"
+                    placeholder="Ingrese el texto a encriptar aquí">
+                    </textarea>
+                    <div>
+                        <h6 class="informacion">Solo letras minúsculas y sin tildes</h6>
+                    </div> <!--información-->
+                    <p id="alerta" class="alerta"></p>
+                    <div class="botones">
+                        <button class="btnEnc" onclick="btnEncriptar()">Encriptar Texto</button>
+                        <button class="btnDes" onclick="btnDesencriptar()">Desencriptar Texto</button>
+                    </div> <!--botones-->
+                </section>
+                <div class="areaencriptada">
+                    <section>
+                        <div id = textosalida>
+                                <textarea class="imgsalida" cols="20" rows="2"></textarea>
+                                <textarea class="textoEnc" cols="20" rows="10"></textarea>
+                        </div> <!--textosalida-->
+                        <div id = "bcopiar" style="display: none;">
+                            <button class="btncopiar" onclick="btnCopiarT()">Copiar Texto</button>
+                        </div> <!--bcopiar-->
+                    </section>        
+                </div><!--areaencriptada-->
+            </main>
+        </div> <!--contenedor-->
+    </body>
+    <footer>
+        <p class="copyright">&copy Copyright Desarrollos Vanessa Salas - 2023</p>
+    </footer>
+    <script src="./script.js"></script>
+</html>
