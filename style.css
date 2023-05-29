@@ -4,13 +4,13 @@
     background: #F3F5FC;
     font-family: 'Inter';
     font-weight: 400;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 150%;
 }
 .contenedor{
     position: relative;
     width: 100vw;
-    height: 92vh;
+    height: 90vh;
 }
 h2{
     display:flex;
@@ -70,17 +70,18 @@ head.title{
     outline: none;
     border: none;
 }
+
 .areaencriptada{
     display: flex;
-    justify-content: center;
-    position: absolute;
-    width: 30%;
-    height: 96%;
+    position:absolute;
+    width: 40%;
+    height: 60%;
     left: 60%;
-    top: 2%;
+    top: 0%;
     box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
     border-radius: 32px;
 }
+
 .imgsalida{
     background-position: right;
     background-repeat: no-repeat;
@@ -88,9 +89,13 @@ head.title{
     border: none;
     border-radius: 24px;
     color: #0A3871; 
-    margin: 0; 
-    padding: 0; 
-    width: 100%;
+    margin-left: 0%; 
+    margin-top: 1%; 
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    padding-top: 1%;
+    padding-left: 1%; 
+    width: 70%;
     resize: none;
 }
 .textoEnc {
@@ -101,15 +106,18 @@ head.title{
     border: none;
     border-radius: 24px;
     color: #0A3871; 
-    margin-left: 10%; 
+    margin-left: 1%; 
     margin-top: 0%; 
     padding-top: 0%;
-    padding-left: 10%; 
+    padding-left: 1%;
+    width: 70%;
     resize: none;
 }
-.textoEnc:focus {
+
+.textoEnc, .imgsalida:focus {
     outline: none;
 }
+
 .botones,.btncopiar{
     display: flex;
     flex-direction: row;
@@ -127,7 +135,7 @@ head.title{
     gap: 8px;
     width: 22%;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 25px;
     background-color: #0A3871;
     border: 1px solid #0A3871;
@@ -143,7 +151,7 @@ head.title{
     gap: 8px;
     width: 22%;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 25px;
     margin-left: 10px;
     background: #D8DFE8;
@@ -159,23 +167,23 @@ head.title{
     padding: 1.5%;
 }
 .btncopiar:hover{
-    margin: 5% 6% 0% 6%;
-    width: 70%;
+    margin: 37% 4% 0% 4%;
+    width: 45%;
     padding: 3%;
 }
 .btncopiar{
     align-items: center;
-    vertical-align: bottom; 
     justify-content: center;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
+    gap: 8px;
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
-    line-height: 30px;
-    margin: 5% 8% 0% 8%;
-    width: 62.5%;
+    line-height: 25px;
+    margin: 38% 6% 0% 6%;
+    width: 42%;
     padding: 4%;
 }
 .informacion{
@@ -210,7 +218,7 @@ head.title{
     text-align:center;
     padding: 0px;
     color: #979350;
-    font-size:medium;
+    font-size:small;
     font-style: italic;
     font-weight: bold;
 }
