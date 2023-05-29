@@ -2,25 +2,6 @@ const textoIng = document.querySelector(".textoIng");
 const textoEnc = document.querySelector(".textoEnc");
 const imgsal = document.querySelector(".imgsalida");
 let marco = document.getElementsByClassName(".areaencriptada");
-const alerta = document.getElementById("alerta");
-textoIng.addEventListener("keydown", validaTexto);
-
-function validaTexto(e){
-    alerta.textContent ="";
-    if (e.key === "á" || e.key === "é" || e.key === "í" || e.key === "ó" || e.key === "ú"
-        || e.key === "Á" || e.key === "É" || e.key === "Í" || e.key === "Ó" || e.key === "Ú"
-        || e.key === "Dead"){
-        e.preventDefault();
-        alerta.textContent = "¡¡No debes utilizar tildes!!";
-    }
-    else {
-        if (e.key >="A" && e.key <= "Z") {
-            e.preventDefault();
-            alerta.textContent = "¡¡No debes utilizar Mayúsculas!!";
-
-        } 
-    }
-};
 
 /*Llave de encriptación:
 ["e","enter"], ["i", "imes"], ["a","ai"], ["o", "ober"], ["u", "ufat"]
@@ -32,6 +13,7 @@ function limpiaEnc(){
     document.getElementById('bcopiar').style.display = 'none';
     imgsal.style.backgroundImage = 'none';
 }
+
 
 function btnEncriptar(){
     textoEnc.value = encriptar(textoIng.value);

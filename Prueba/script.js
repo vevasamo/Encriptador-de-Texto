@@ -2,25 +2,22 @@ const textoIng = document.querySelector(".textoIng");
 const textoEnc = document.querySelector(".textoEnc");
 const imgsal = document.querySelector(".imgsalida");
 let marco = document.getElementsByClassName(".areaencriptada");
-const alerta = document.getElementById("alerta");
-textoIng.addEventListener("keydown", validaTexto);
-
-function validaTexto(e){
-    alerta.textContent ="";
-    if (e.key === "á" || e.key === "é" || e.key === "í" || e.key === "ó" || e.key === "ú"
-        || e.key === "Á" || e.key === "É" || e.key === "Í" || e.key === "Ó" || e.key === "Ú"
-        || e.key === "Dead"){
-        e.preventDefault();
-        alerta.textContent = "¡¡No debes utilizar tildes!!";
+textoIng.addEventListener("keydown", function validaTexto(Event){
+    /*  if (event.ctrlKey && event.key === "c") { */
+    let l = Event.keyCode;
+    let pos = textoIng.length;
+    if ((l >= 97 && l <= 122) || (l == 32)){
+        textoIng.value[pos] = textoIng.value[pos];
     }
     else {
-        if (e.key >="A" && e.key <= "Z") {
-            e.preventDefault();
-            alerta.textContent = "¡¡No debes utilizar Mayúsculas!!";
-
-        } 
+        if (l >= 65 && l <= 90) {
+            textoIng.value[pos] = textoIng.value[pos] + 32;
+        }
+        else{
+            textoIng.value[pos] ="";
+        }
     }
-};
+});
 
 /*Llave de encriptación:
 ["e","enter"], ["i", "imes"], ["a","ai"], ["o", "ober"], ["u", "ufat"]
@@ -31,6 +28,26 @@ function limpiaEnc(){
     textoEnc.style.backgroundImage = "url('./Imagenes/Secreto.png')";
     document.getElementById('bcopiar').style.display = 'none';
     imgsal.style.backgroundImage = 'none';
+}
+
+
+function validaTexto2(e){
+    /* onkeypress="return ((event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))"
+    
+   letra = e.which;
+   letra = String.fromCharCode(key);*/
+   letra = e.keyCode;
+   if ((letra >= 97 && letra <= 122) || (letra == 32)){
+    return letra;
+   }
+   else {
+    if (letra >= 65 && letra <= 90) {
+        return letra + 32;
+    }
+    else{
+        return;
+    }
+   }
 }
 
 function btnEncriptar(){

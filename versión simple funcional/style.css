@@ -10,7 +10,7 @@
 .contenedor{
     position: relative;
     width: 100vw;
-    height: 92vh;
+    height: 96vh;
 }
 h2{
     display:flex;
@@ -28,25 +28,11 @@ head.title{
     display: flex;
 }
 .logo{
-    display: inline;
     padding-top:0.5%;
-    margin-left: 1%;
+    margin-left: 0.5%;
     width: 7%;
     height: 7%;
 }
-.linkedIn{
-    display: inline;
-    width: 1%;
-    height: 1%;
-    margin: 0%;
-}
-.github{
-    display: inline;
-    width: 1.25%;
-    height: 1.25%;
-    margin: 0%;
-}
-
 .textoIng{
     position: absolute;
     width: 42%;
@@ -57,8 +43,6 @@ head.title{
     background-position: center;
     background-repeat: no-repeat;
     background-size: 40%;
-    padding: 0%;
-    margin: 0%;
     color: #0A3871;
     resize: none;
 }
@@ -75,9 +59,9 @@ head.title{
     justify-content: center;
     position: absolute;
     width: 30%;
-    height: 96%;
+    height: 93%;
     left: 60%;
-    top: 2%;
+    top: 5%;
     box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
     border-radius: 32px;
 }
@@ -118,7 +102,7 @@ head.title{
     position: absolute;
     width: 80%;
     left: 12%;
-    top: 84%;
+    top: 83%;
 }
 .btnEnc{
     align-items: center;
@@ -146,6 +130,7 @@ head.title{
     font-size: 24px;
     line-height: 25px;
     margin-left: 10px;
+
     background: #D8DFE8;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -156,11 +141,11 @@ head.title{
 .btnEnc:hover{
     margin: 0.3%;
     width: 24.5%;
-    padding: 1.5%;
+    padding: 1.8%;
 }
 .btncopiar:hover{
-    margin: 5% 6% 0% 6%;
-    width: 70%;
+    margin: 2% 8% 0% 8%;
+    width: 62.5%;
     padding: 3%;
 }
 .btncopiar{
@@ -169,14 +154,14 @@ head.title{
     justify-content: center;
     text-align: center;
     font-size: 24px;
+    line-height: 30px;
+    margin: 3% 8% 0% 8%;
+    width: 62.5%;
+    padding: 4%;
     border: 1px solid #0A3871;
     border-radius: 24px;
     color: #0A3871;
     cursor: pointer;
-    line-height: 30px;
-    margin: 5% 8% 0% 8%;
-    width: 62.5%;
-    padding: 4%;
 }
 .informacion{
     display: flex;
@@ -187,28 +172,14 @@ head.title{
     position: absolute;
     width: 80%;
     left: 12%;
-    top: 79%;
+    top: 80%;
     color: #495057;
-    font-size: 18px;
-}
-.alerta{
-    display: flex;
-    flex-direction: row;
-    align-items: right;
-    padding: 0px;
-    gap: 8px;
-    position: absolute;
-    width: 80%;
-    font-style: italic;
-    font-weight: 800;
-    left: 42%;
-    top: 79%;
-    color: red;
     font-size: 18px;
 }
 .copyright{
     text-align:center;
     padding: 0px;
+    background-color: #495057;
     color: #979350;
     font-size:medium;
     font-style: italic;
